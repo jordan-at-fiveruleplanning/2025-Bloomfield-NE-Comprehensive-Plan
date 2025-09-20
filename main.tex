@@ -1,0 +1,215 @@
+\documentclass[11pt,oneside,letterpaper,english]{article}
+%\usepackage[T1]{fontenc}
+\usepackage[margin=2.25cm,headheight=26pt,includeheadfoot]{geometry}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[framed, numbered]{matlab-prettifier}
+\usepackage{changepage}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{lscape}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage[english]{nomencl}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{datetime2}
+
+%%%%% Fonts %%%%%
+%% Section headers are Roboto
+% \usepackage{titling}
+% \usepackage[condensed]{roboto}
+% \usepackage[default]{sourcesanspro}
+% \renewcommand\maketitlehooka{\robotocondensed}
+% \makeatletter
+% \renewcommand\section{\@startsection {section}{1}{\z@}%
+%   {-3.5ex \@plus -1ex \@minus -.2ex}%
+%   {2.3ex \@plus.2ex}%
+%   {\normalfont\robotocondensed\Large\bfseries}}
+% \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+%   {-3.25ex\@plus -1ex \@minus -.2ex}%
+%   {1.5ex \@plus .2ex}%
+%   {\normalfont\robotocondensed\large\bfseries}}
+% \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+%   {-3.25ex\@plus -1ex \@minus -.2ex}%
+%   {1.5ex \@plus .2ex}%
+%   {\normalfont\robotocondensed\normalsize\bfseries}}
+% \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+%   {3.25ex \@plus1ex \@minus.2ex}%
+%   {-1em}%
+%   {\normalfont\robotocondensed\normalsize\bfseries}}
+% \renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+%   {3.25ex \@plus1ex \@minus .2ex}%
+%   {-1em}%
+%   {\normalfont\robotocondensed\normalsize\bfseries}}
+% \makeatother
+
+%% Main body font is Verdana
+\usepackage{fontspec}
+\setmainfont{Verdana}
+\setromanfont{Verdana}
+\defaultfontfeatures{Mapping=text-text}
+\setsansfont{Verdana}
+\renewcommand*{\familydefault}{\sfdefault}
+
+%%%%% Header and Footer %%%%%
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\parindent}{2em}
+\title{City of Bloomfield 2025 Comprehensive Development Plan} % to reference as \title, dont use \maketitle
+\makeatletter\let\Title\@title\makeatother
+
+\lstset{language=Matlab,
+style=Matlab-editor,
+basicstyle=\normalsize\mlttfamily,
+numbers=left,
+numberstyle={\scriptsize\color{black}},	% size of the numbers
+numbersep=0.5cm											
+}
+
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{leftmargin=1.5cm,label = Step \arabic*:}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\rmdefault}{ptm}
+
+%\lhead{\Title}
+% \rhead{\nouppercase{\rightmark}}
+\lhead{\Title}
+\rfoot{\includegraphics[height=1.5cm]{assets/five_rule_logo.png}} % right header logo
+\setlength\headheight{16pt}
+\setlength{\footskip}{50pt}
+\lhead{\Title} %rightH title
+\cfoot{\thepage}
+
+%%%%% floatnote %%%%%
+%%% floats
+\usepackage{float}
+% Custom Table/Figure Formatting
+\newcommand{\floatnote}[1]{
+\caption*{\footnotesize \textit{Note:} #1}\vspace{-\abovecaptionskip}}
+% \floatstyle{boxed} 
+% \restylefloat{figure}
+\usepackage{pdflscape}
+\usepackage{framed}
+
+\usepackage{dcolumn}
+
+\usepackage{tabularray}
+\usepackage{xltabular}
+\usepackage{enotez}
+
+\usepackage{makecell}
+
+\usepackage{setspace}
+\usepackage{authblk}
+\usepackage{stackengine}
+\usepackage[hang,flushmargin]{footmisc} \setlength{\footnotesep}{\baselineskip} 
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{longtable}
+
+%%%%% Color customization %%%%%
+\usepackage{xcolor}
+\definecolor{coBalt}{HTML}{0047AB}
+
+% Set up links
+\hypersetup{
+    colorlinks,
+    citecolor=coBalt,
+    filecolor=black,
+    linkcolor=coBalt,
+    urlcolor=coBalt
+}
+
+%%% Remove chapter title headers
+\usepackage{titlesec}
+\titleformat{\section}{}{}{0em}{\bf\LARGE}
+
+%%%%% Suppress section numbers %%%%%
+\usepackage{bookmark}
+\makeatletter
+\renewcommand\@seccntformat[1]{}
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\normalfont\large\bfseries}}
+
+
+% --- End of page settings ---
+
+%% Background
+\usepackage[pages=some]{background}
+\backgroundsetup{
+scale=1,
+opacity=1,
+angle=0,
+contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{assets/titlepage_transparent_out.pdf}
+  }%
+}
+
+\usepackage{pdfpages}
+
+%% Subfigures
+\usepackage{subcaption}
+
+%% Multiple columns
+\usepackage{multicol}
+\usepackage{blindtext}
+
+
+%%%%% COMPILE DOCUMENT %%%%%
+\begin{document}
+\pagenumbering{arabic} 
+\input{pages/00_frontpage}
+
+\newpage
+\doublespacing
+%\addcontentsline{toc}{section}{Table of Contents}
+\renewcommand{\baselinestretch}{1}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1}\normalsize
+%\singlespacing
+\thispagestyle{empty} % force page style
+
+\newpage
+\pagenumbering{arabic} 
+\fancyfoot[C]{Page \thepage\ of \pageref{EndOfText}}
+
+%%%%% input pages here %%%%%
+\input{pages/01_context}
+\pagebreak
+\input{pages/02_focusareas}
+\pagebreak
+\input{pages/03_demos}
+\pagebreak
+\input{pages/04_landuse}
+\pagebreak
+\input{pages/05_transportation}
+\pagebreak
+\input{pages/06_facilities}
+\pagebreak
+\input{pages/07_energy}
+
+\label{EndOfText}
+\end{document}
