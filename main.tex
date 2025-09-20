@@ -178,10 +178,13 @@ contents={%
 \usepackage{blindtext}
 
 
+%% Appendices
+\usepackage[title]{appendix}
+
 %%%%% COMPILE DOCUMENT %%%%%
 \begin{document}
 \pagenumbering{arabic} 
-\input{pages/00_frontpage}
+\input{pages/frontPage}
 
 \newpage
 \doublespacing
@@ -197,19 +200,24 @@ contents={%
 \fancyfoot[C]{Page \thepage\ of \pageref{EndOfText}}
 
 %%%%% input pages here %%%%%
-\input{pages/01_context}
+\input{pages/context}
 \pagebreak
-% \input{pages/02_focusareas}
-% \pagebreak
-% \input{pages/03_demos}
-% \pagebreak
-% \input{pages/04_landuse}
-% \pagebreak
-% \input{pages/05_transportation}
-% \pagebreak
-% \input{pages/06_facilities}
+\input{pages/existingLandUse}
+\pagebreak
+\input{pages/housing}
+\pagebreak
+\input{pages/commrcial}
+\pagebreak
+\input{pages/roads}
+\pagebreak
+\input{pages/city}
+\pagebreak
+\input{pages/futureLandUse}
 % \pagebreak
 % \input{pages/07_energy}
+
+\pagebreak
+\input{pages/appendix}
 
 \label{EndOfText}
 \end{document}
