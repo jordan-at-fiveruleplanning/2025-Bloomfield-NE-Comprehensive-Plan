@@ -1,7 +1,7 @@
 # About
 This is the repository for the **Bloomfield, Nebraska Comprehensive Development Plan**, updated by [Jordan Duffin Wong](https://jordanduffinw.github.io) and [Five Rule Rural Planning](https://www.fiveruleplanning.com) in 2025. The repository relies on integrating LaTeX and R scripts to produce a PDF copy of the Plan.
 
-You can read the most recent version of the plan [here](drafts/20250920_demo.pdf).
+You can read the most recent version of the plan [here](drafts/20250926_demo.pdf).
 
 ## assets
 This folder contains Five Rule Rural Planning marketing assets, such as the company logo, used in the Plan.
